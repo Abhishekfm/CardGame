@@ -84,7 +84,7 @@ function makeNormal() {
   function delay(j) {
     setTimeout(() => {
         turned_arr[j].style.transform = "none";
-        if(j === 1){
+        if(j === turned_arr.length-1){
           turned_arr = [];
         }
     }, 800);
@@ -130,7 +130,7 @@ for (let i = 0; i < ele.length; i++) {
     inner[i].style.transform = "rotateY(180deg)";
     turned_arr.push(inner[i]);
     turned++;
-    if (turned === 2) {
+    if (turned >= 2) {
       makeNormal();
       turned = 0;
     //   setTimeout(() => {
